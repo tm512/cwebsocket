@@ -183,7 +183,7 @@ int cwebsocket_client_connect(cwebsocket_client *websocket) {
 	snprintf(handshake, 1024,
 		      "GET %s%s HTTP/1.1\r\n"
 		      "Host: %s:%s\r\n"
-		      "Upgrade: WebSocket\r\n"
+		      "Upgrade: websocket\r\n"
 		      "Connection: Upgrade\r\n"
 		      "Sec-WebSocket-Key: %s\r\n"
 		      "Sec-WebSocket-Version: 13\r\n"
