@@ -187,7 +187,8 @@ int cwebsocket_client_connect(cwebsocket_client *websocket) {
 		      "Connection: Upgrade\r\n"
 		      "Sec-WebSocket-Key: %s\r\n"
 		      "Sec-WebSocket-Version: 13\r\n"
-			  ,resource, querystring, hostname, port, seckey);
+		      "Cookie: %s\r\n",
+			  resource, querystring, hostname, port, seckey, websocket->cookie);
 
 	if(websocket->subprotocol_len > 0) {
 		strcat(handshake, "Sec-WebSocket-Protocol: ");
